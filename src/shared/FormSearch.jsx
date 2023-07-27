@@ -7,10 +7,10 @@ const FormSearch = () => {
             name="search"
             id="search"
             placeholder="Search by title"
-            className="px-5 py-2 grow focus:outline-none rounded-lg"
+            className="px-5 py-2 grow focus:outline-none rounded-l-lg"
             required
           />
-          <button className="bg-green-500 px-5 text-white rounded-r-lg" type="submit">
+          <button className="bg-secondary px-5 text-white rounded-r-lg" type="submit">
             search now
           </button>
         </form>

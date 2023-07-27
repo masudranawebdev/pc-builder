@@ -7,6 +7,9 @@ export default function HomePage() {
       <Head>
         <title>Pc-builder</title>
       </Head>
+      <div className="">
+
+      </div>
     </main>
   );
 }
