@@ -17,7 +17,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="main-container bg-primary">
+      <div className="px-1 md:main-container bg-primary">
         <div className="py-2 flex justify-between items-center text-white">
           <div onClick={handleToggle}>
             {isOpen ? (
@@ -93,7 +93,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`absolute lg:hidden  transition-all w-[300px] duration-300 ${
+          className={`absolute z-50 lg:hidden  transition-all w-[300px] duration-300 ${
             isOpen ? "-translate-x-1" : "-translate-x-[320px]"
           }`}
         >

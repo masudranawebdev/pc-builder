@@ -1,3 +1,4 @@
+import Herosection from "@/components/herosection/Herosection";
 import RootLayout from "@/layout/RootLayout";
 import Head from "next/head";
 
@@ -8,7 +9,7 @@ export default function HomePage() {
         <title>Pc-builder</title>
       </Head>
       <div className="">
-
+        <Herosection />
       </div>
     </main>
   );
