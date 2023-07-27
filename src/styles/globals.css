@@ -12,6 +12,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #F2F4F8;
 }
 
 @layer components {
@@ -47,6 +48,20 @@ body {
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 

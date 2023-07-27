@@ -27,13 +27,12 @@ const Herosection = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className="md:main-container">
+    <div className="md:main-container z-0">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, Keyboard]}
         slidesPerView={1}
         navigation={true}
-        grabCursor={true}
         loop={true}
         autoplay={{
           delay: 3000,
@@ -51,7 +50,7 @@ const Herosection = () => {
             src={"/assests/images/bannerImage5.jpg"}
             width={1500}
             height={400}
-            className="h-[200px] lg:h-[600px] pt-4 pb-8 lg:py-10"
+            className="h-[200px] z-0 lg:h-[600px] pt-4 pb-8 lg:py-10"
             alt="bannerImage1"
           />
         </SwiperSlide>
@@ -60,7 +59,7 @@ const Herosection = () => {
             src="/assests/images/bannerImage4.jpg"
             width={1920}
             height={400}
-            className="h-[200px] lg:h-[600px] pt-4 pb-8 lg:py-10"
+            className="h-[200px] z-0 lg:h-[600px] pt-4 pb-8 lg:py-10"
             alt="bannerImage1"
           />
         </SwiperSlide>
@@ -69,7 +68,7 @@ const Herosection = () => {
             src="/assests/images/bannerImage3.jpg"
             width={1900}
             height={400}
-            className="h-[200px] lg:h-[600px] pt-4 pb-8 lg:py-10"
+            className="h-[200px] z-0 lg:h-[600px] pt-4 pb-8 lg:py-10"
             alt="bannerImage1"
           />
         </SwiperSlide>
