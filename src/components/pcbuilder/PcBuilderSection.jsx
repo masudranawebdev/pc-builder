@@ -44,7 +44,7 @@ const PcBuilderSection = () => {
     },
   ];
   return (
-    <div className="px-1 md:main-container w-9/12 mx-auto bg-white my-10 py-5">
+    <div className="px-1 md:main-container lg:w-9/12 mx-auto bg-white  my-5 lg:my-10 py-5">
       <div className="grid grid-cols-1 gap-3">
         {categories.map((category) => (
           <PcBuilderCard key={category.id} category={category} />

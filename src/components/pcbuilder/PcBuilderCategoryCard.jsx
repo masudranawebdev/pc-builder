@@ -11,7 +11,7 @@ const PcBuilderCategoryCard = ({ product }) => {
     category,
   } = product;
   return (
-    <div className="border my-2 flex items-center gap-2 px-4">
+    <div className="border my-2 flex flex-col lg:flex-row items-center gap-2 pb-2 px-4">
       <div>
         <Image src={image} alt={product_name} height={150} width={150} />
       </div>
