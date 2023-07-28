@@ -26,11 +26,11 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/pc_components");
-  const products = await res.json();
+  const res = await fetch("http://localhost:3000/api/db");
+  const data = await res.json();
 
   // Shuffle the products array randomly
-  const shuffledProducts = products.sort(() => Math.random() - 0.5);
+  const shuffledProducts = data?.products.sort(() => Math.random() - 0.5);
 
   // Slice the first 10 elements from the shuffled array
   const randomProducts = shuffledProducts.slice(0, 10);

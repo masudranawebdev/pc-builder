@@ -175,10 +175,10 @@ ProductDetailsPage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:5000/pc_components");
-  const products = await res.json();
+  const res = await fetch("http://localhost:3000/api/db");
+  const data = await res.json();
 
-  const paths = products.map((product) => ({
+  const paths = data.products.map((product) => ({
     params: { id: product.id },
   }));
 
@@ -187,11 +187,11 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/pc_components/${params.id}`);
-  const product = await res.json();
+  const res = await fetch(`http://localhost:3000/api/db?productId=${params.id}`);
+  const data = await res.json();
   return {
     props: {
-      product,
+      product: data.product,
     },
   };
 };

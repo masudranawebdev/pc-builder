@@ -15,10 +15,10 @@ CategoriesPage.getLayout = function getLayout(page) {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:5000/pc_components");
-  const products = await res.json();
+  const res = await fetch("http://localhost:3000/api/db");
+  const data = await res.json();
 
-  const paths = products.map((product) => ({
+  const paths = data?.products.map((product) => ({
     params: { category: product.category },
   }));
 
@@ -28,12 +28,12 @@ export async function getStaticPaths() {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/pc_components?category=${params.category}`
+    `http://localhost:3000/api/db?category=${params.category}`
   );
-  const products = await res.json();
+  const data = await res.json();
   return {
     props: {
-      products,
+      products: data.products,
     },
   };
 };

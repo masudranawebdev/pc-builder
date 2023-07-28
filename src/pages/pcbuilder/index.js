@@ -3,7 +3,7 @@ import RootLayout from "@/layout/RootLayout";
 const PcbuilderPage = () => {
   return (
     <div>
-      <h1>this pc builder page</h1>
+      
     </div>
   );
 };
