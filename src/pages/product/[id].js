@@ -23,7 +23,7 @@ const ProductDetailsPage = ({ product }) => {
   return (
     <div className="px-1 md:main-container">
       <div className="bg-white py-5 grid grid-cols-1 lg:grid-cols-2 gap-3 items-center ">
-        <div className="">
+        <div className="border ml-1">
           <Image src={image} height={400} width={600} alt={product_name} />
         </div>
         <div className="space-y-3">
@@ -64,7 +64,10 @@ const ProductDetailsPage = ({ product }) => {
               {voltage}
             </p>
           </div>
-          <a className="text-primary underline py-3 inline-block" href="#specification">
+          <a
+            className="text-primary underline py-3 inline-block"
+            href="#specification"
+          >
             View more Details
           </a>
           <div>

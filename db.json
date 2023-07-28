@@ -4,7 +4,7 @@
       "id": "1",
       "image": "/assets/images/pc1.webp",
       "product_name": "Nvidia GeForce RTX 3080",
-      "category": "Graphics Cards",
+      "category": "monitor",
       "status": "In Stock",
       "price": 799.99,
       "description": "The Nvidia GeForce RTX 3080 delivers exceptional gaming performance and real-time ray tracing.",
@@ -40,7 +40,7 @@
       "id": "2",
       "image": "/assets/images/pc2.png",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "monitor",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -76,7 +76,7 @@
       "id": "3",
       "image": "/assets/images/pc3.webp",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "monitor",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -110,9 +110,9 @@
     },
     {
       "id": "4",
-      "image": "/assets/images/pc4.webp",
+      "image": "/assets/images/cpu1.webp",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "processors",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -146,9 +146,9 @@
     },
     {
       "id": "5",
-      "image": "/assets/images/pc5.webp",
+      "image": "/assets/images/cpu2.webp",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "processors",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -182,9 +182,9 @@
     },
     {
       "id": "6",
-      "image": "/assets/images/pc6.webp",
+      "image": "/assets/images/cpu3.jpg",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "processors",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -218,9 +218,9 @@
     },
     {
       "id": "7",
-      "image": "/assets/images/pc7.webp",
+      "image": "/assets/images/motherboard1.jpg",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "motherboard",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -254,9 +254,9 @@
     },
     {
       "id": "8",
-      "image": "/assets/images/pc8.webp",
+      "image": "/assets/images/motherboard2.webp",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "motherboard",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -290,9 +290,9 @@
     },
     {
       "id": "9",
-      "image": "/assets/images/pc9.webp",
+      "image": "/assets/images/motherboard3.jpg",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Processors",
+      "category": "motherboard",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
@@ -326,9 +326,297 @@
     },
     {
       "id": "10",
-      "image": "/assets/images/pc10.webp",
+      "image": "/assets/images/power1.jpg",
       "product_name": "AMD Ryzen 9 5900X",
-      "category": "Graphics Cards",
+      "category": "power supply",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "image": "/assets/images/power2.jpg",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "power supply",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "image": "/assets/images/power3.webp",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "power supply",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "image": "/assets/images/ram1.png",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "ram",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "image": "/assets/images/ram2.webp",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "ram",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "image": "/assets/images/ram3.jpg",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "ram",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "image": "/assets/images/storage1.webp",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "storage",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "image": "/assets/images/storage2.jpg",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "storage",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "port": "AM4",
+        "resolution": "4K",
+        "voltage": "1.25V"
+      },
+      "specification": {
+        "displaySize": "21.9",
+        "displayType": "LED",
+        "panelType": "Va"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.9,
+      "reviews": [
+        {
+          "username": "pcbuilder456",
+          "rating": 5,
+          "comment": "The Ryzen 9 5900X is a beast! Unmatched performance."
+        },
+        {
+          "username": "hardwareenthusiast",
+          "rating": 4.8,
+          "comment": "Excellent CPU for productivity tasks, but could be better optimized for gaming."
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "image": "/assets/images/storage3.webp",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "storage",
       "status": "In Stock",
       "price": 499.99,
       "description": "The AMD Ryzen 9 5900X is a high-performance CPU designed for multitasking and gaming.",

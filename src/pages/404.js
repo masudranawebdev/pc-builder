@@ -1,6 +1,14 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const NotFound = () => {
+  const router = useRouter();
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 3000);
+  });
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>

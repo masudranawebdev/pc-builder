@@ -15,32 +15,32 @@ const FeatureSection = () => {
     {
       id: 1,
       icon: cpu,
-      category: "cpu/processor",
+      category: "processors",
     },
     {
       id: 2,
       icon: mothreboard,
-      category: "Motherboard",
+      category: "motherboard",
     },
     {
       id: 3,
       icon: powerSupply,
-      category: "Power Supply",
+      category: "power supply",
     },
     {
       id: 4,
       icon: ram,
-      category: "Ram",
+      category: "ram",
     },
     {
       id: 5,
       icon: storage,
-      category: "Storage Device",
+      category: "storage",
     },
     {
       id: 6,
       icon: monitor,
-      category: "Monitor",
+      category: "monitor",
     },
   ];
   return (

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { FiStar } from "react-icons/fi";
 
-const ProductCard = ({ product }) => {
+const CategoryCard = ({ product }) => {
   const {
     product_name,
     image,
@@ -30,13 +30,16 @@ const ProductCard = ({ product }) => {
           {Array(round)
             .fill()
             .map((_, i) => (
-              <FiStar key={i} className="w-4 h-4  text-yellow-500 inline-block" />
+              <FiStar
+                key={i}
+                className="w-4 h-4  text-yellow-500 inline-block"
+              />
             ))}
-            <p>{round}</p>
+          <p>{round}</p>
         </div>
       </div>
     </Link>
   );
 };
 
-export default ProductCard;
+export default CategoryCard;
