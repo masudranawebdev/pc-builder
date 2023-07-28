@@ -47,7 +47,7 @@ const Herosection = () => {
       >
         <SwiperSlide>
           <Image
-            src={"/assests/images/bannerImage5.jpg"}
+            src={"/assets/images/bannerImage5.jpg"}
             width={1500}
             height={400}
             className="h-[200px] z-0 lg:h-[600px] pt-4 pb-8 lg:py-10"
@@ -56,7 +56,7 @@ const Herosection = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src="/assests/images/bannerImage4.jpg"
+            src="/assets/images/bannerImage4.jpg"
             width={1920}
             height={400}
             className="h-[200px] z-0 lg:h-[600px] pt-4 pb-8 lg:py-10"
@@ -65,7 +65,7 @@ const Herosection = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src="/assests/images/bannerImage3.jpg"
+            src="/assets/images/bannerImage3.jpg"
             width={1900}
             height={400}
             className="h-[200px] z-0 lg:h-[600px] pt-4 pb-8 lg:py-10"
