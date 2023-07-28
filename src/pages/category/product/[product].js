@@ -1,8 +1,8 @@
-import PcBuilderSection from "@/components/pcbuilder/PcBuilderSection";
+import PcBuilderCategorySection from "@/components/pcbuilder/PcBuilderCategorySection";
 import RootLayout from "@/layout/RootLayout";
 import Link from "next/link";
 
-const PcbuilderPage = () => {
+const CategoriesProductsPage = ({ products }) => {
   return (
     <div className="px-1 md:main-container">
       <nav aria-label="breadcrumb" className="w-full mt-5">
@@ -34,23 +34,64 @@ const PcbuilderPage = () => {
             >
               <path d="M32 30.031h-32l16-28.061z"></path>
             </svg>
+            <Link
+              rel="noopener noreferrer"
+              href="/pcbuilder"
+              className="flex items-center px-1 capitalize hover:underline"
+            >
+              pc builder
+            </Link>
+          </li>
+          <li className="flex items-center space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+              fill="currentColor"
+              className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-600"
+            >
+              <path d="M32 30.031h-32l16-28.061z"></path>
+            </svg>
             <p
               rel="noopener noreferrer"
               href="/pcbuilder"
               className="flex items-center px-1 capitalize"
             >
-              pc builder
+              category/product
             </p>
           </li>
         </ol>
       </nav>
-      <PcBuilderSection />
+      <PcBuilderCategorySection products={products} />
     </div>
   );
 };
 
-export default PcbuilderPage;
-
-PcbuilderPage.getLayout = function getLayout(page) {
+export default CategoriesProductsPage;
+CategoriesProductsPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
+};
+
+export async function getStaticPaths() {
+  const res = await fetch("http://localhost:3000/api/db");
+  const data = await res.json();
+
+  const paths = data?.products.map((product) => ({
+    params: { product: product.category },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export const getStaticProps = async (context) => {
+  const { params } = context;
+  const res = await fetch(
+    `http://localhost:3000/api/db?category=${params.product}`
+  );
+  const data = await res.json();
+  return {
+    props: {
+      products: data.products,
+    },
+  };
 };

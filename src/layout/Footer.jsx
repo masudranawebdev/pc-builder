@@ -7,8 +7,10 @@ const Footer = () => {
 
       <div>
         <Link href="/" className="underline cursor-pointer">
-          <span className="text-gray-950 uppercase text-3xl font-bold">PC</span>
-          <span className="text-gray-500 text-xl font-medium">builder</span>
+          <span className="text-gray-950 uppercase text-3xl font-bold">P</span>
+          <span className="text-gray-500 text-2xl font-medium">C</span>
+          <span className="text-gray-950 uppercase text-3xl font-bold">B</span>
+          <span className="text-gray-500 text-xl font-medium">uilder</span>
         </Link>
         <p className="text-gray-800 text-[16px] 3xl:text-[18px] xl:leading-[27px] 3xl:leading-[24px] 5xl:leading-[36px] pt-3">
           Lorem ipsum, or lipsum as it is sometimes kno wn, is dummy text used
