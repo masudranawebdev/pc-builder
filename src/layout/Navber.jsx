@@ -65,6 +65,7 @@ const Navbar = () => {
               <span class="relative text-white lg:uppercase">pc builder</span>
             </Link>
           </div>
+          {/* mobile navber */}
           <div className="fixed bottom-0 left-0 px-5 py-2 lg:hidden bg-primary flex justify-between w-full gap-3">
             <div className="flex flex-col items-center">
               <FiGift className="w-4 h-4" />

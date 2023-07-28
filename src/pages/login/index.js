@@ -1,31 +1,31 @@
 import RootLayout from "@/layout/RootLayout";
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
+import Link from "next/link";
+import React, { useState } from "react";
+import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 
-const SignupPage = () => {
+const LoginPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: ''
+    name: "",
+    email: "",
+    password: "",
   });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData(prevData => ({ ...prevData, [name]: value }));
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Your registration logic here, e.g., send data to backend for registration
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Clear form fields after submission
-    setFormData({ name: '', email: '', password: '' });
+    setFormData({ name: "", email: "", password: "" });
   };
 
   return (
-    <div className="md:main-container bg-gray-100">
-      <nav aria-label="breadcrumb" className="w-full p-4">
+    <div className="md:main-container mb-10 bg-gray-100">
+      <nav aria-label="breadcrumb" className="w-full">
         <ol className="flex h-8 space-x-2">
           <li className="flex items-center">
             <Link
@@ -56,44 +56,19 @@ const SignupPage = () => {
             </svg>
             <Link
               rel="noopener noreferrer"
-              href="/signup"
+              href="/login"
               className="flex items-center px-1 capitalize hover:underline"
             >
-              Signup
+              login
             </Link>
           </li>
         </ol>
       </nav>
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-[50vh]">
         <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold">CREATE AN ACCOUNT</h2>
-          <p className="text-sm mb-4">
-            Register here if you are a new customer.
-          </p>
+          <h2 className="text-2xl font-semibold">Please login</h2>
+          <p className="text-sm mb-4">Welcome to our vip customer.</p>
           <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label
-                htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-600"
-              >
-                Name
-              </label>
-              <div className="relative">
-                <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-                  <FaUser />
-                </span>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full p-2 pl-10 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-            </div>
             <div className="mb-4">
               <label
                 htmlFor="email"
@@ -140,22 +115,15 @@ const SignupPage = () => {
                 />
               </div>
             </div>
-            <div className="flex gap-x-3 mb-3">
-              <input type="checkbox" name="" id="" />
-              <p>
-                I have read and agree to the{' '}
-                <span className="text-blue-500">terms & conditions</span>
-              </p>
-            </div>
             <button
               type="submit"
               className="w-full py-2 px-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
             >
-              Sign Up
+              login
             </button>
           </form>
           <div className="mt-5">
-            <p className="text-center">OR SINGUP IN WITH</p>
+            <p className="text-center">OR LOGIN IN WITH</p>
             <div className="flex gap-x-3 mt-5">
               <button className="bg-gray-700 w-full py-2 rounded text-white text-center">
                 Github
@@ -165,9 +133,9 @@ const SignupPage = () => {
               </button>
             </div>
             <p className="text-center mt-5">
-              <span className="mr-3">Already have an account.?</span>
-              <Link className="text-blue-600 hover:underline" href="/login">
-                Login now
+              <span className="mr-1">If you are new here.</span>
+              <Link className="text-blue-600 hover:underline" href="/signup">
+                create account
               </Link>
             </p>
           </div>
@@ -177,7 +145,7 @@ const SignupPage = () => {
   );
 };
 
-export default SignupPage;
-SignupPage.getLayout = function getLayout(page) {
+export default LoginPage;
+LoginPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
