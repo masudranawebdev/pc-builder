@@ -1,9 +1,12 @@
 import RootLayout from "@/layout/RootLayout";
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 
 const LoginPage = () => {
+  const {data: session} = useSession();
+  console.log(session.user);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -125,10 +128,18 @@ const LoginPage = () => {
           <div className="mt-5">
             <p className="text-center">OR LOGIN IN WITH</p>
             <div className="flex gap-x-3 mt-5">
-              <button className="bg-gray-700 w-full py-2 rounded text-white text-center">
+              <button
+                onClick={() =>
+                  signIn("github", { callbackUrl: "http://localhost:3000" })
+                }
+                className="bg-gray-700 w-full py-2 rounded text-white text-center"
+              >
                 Github
               </button>
-              <button className="bg-red-500 w-full py-2 rounded text-white text-center">
+              <button
+                onClick={() => signIn("google")}
+                className="bg-red-500 w-full py-2 rounded text-white text-center"
+              >
                 Google
               </button>
             </div>
