@@ -1,12 +1,12 @@
 import RootLayout from "@/layout/RootLayout";
-import { signIn, useSession } from "next-auth/react";
+import { signIn, useSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import React, { useState } from "react";
-import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const LoginPage = () => {
-  const {data: session} = useSession();
-  console.log(session.user);
+  const { data: session } = useSession();
+  console.log(session?.user);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,7 +25,19 @@ const LoginPage = () => {
     // Clear form fields after submission
     setFormData({ name: "", email: "", password: "" });
   };
-
+  
+  if (session?.user) {
+    return (
+      <div
+        onClick={() => signOut()}
+        className="flex flex-col items-center justify-center h-[70vh] bg-gray-100"
+      >
+        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300">
+          Log out
+        </button>
+      </div>
+    );
+  }
   return (
     <div className="md:main-container mb-10 bg-gray-100">
       <nav aria-label="breadcrumb" className="w-full">
@@ -137,7 +149,7 @@ const LoginPage = () => {
                 Github
               </button>
               <button
-                onClick={() => signIn("google")}
+                onClick={() => signIn("google",{callbackUrl: "http://localhost:3000"})}
                 className="bg-red-500 w-full py-2 rounded text-white text-center"
               >
                 Google
@@ -145,7 +157,7 @@ const LoginPage = () => {
             </div>
             <p className="text-center mt-5">
               <span className="mr-1">If you are new here.</span>
-              <Link className="text-blue-600 hover:underline" href="/signup">
+              <Link className="text-blue-600 hover:underline" href="#">
                 create account
               </Link>
             </p>
