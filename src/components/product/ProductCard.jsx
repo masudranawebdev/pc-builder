@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FiStar } from "react-icons/fi";
 
 const ProductCard = ({ product }) => {

@@ -1,5 +1,4 @@
 import RootLayout from "@/layout/RootLayout";
-import React from "react";
 
 const PcbuilderPage = () => {
   return (

@@ -1,6 +1,5 @@
 import CategorySection from "@/components/category/CategorySection";
 import RootLayout from "@/layout/RootLayout";
-import React from "react";
 
 const CategoriesPage = ({ products }) => {
   return (

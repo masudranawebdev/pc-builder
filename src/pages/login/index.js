@@ -1,7 +1,7 @@
 import RootLayout from "@/layout/RootLayout";
 import { signIn, useSession, signOut } from "next-auth/react";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const LoginPage = () => {

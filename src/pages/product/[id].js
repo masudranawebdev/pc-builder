@@ -1,6 +1,6 @@
 import RootLayout from "@/layout/RootLayout";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ProductDetailsPage = ({ product }) => {
   const [select, setSelect] = useState(false);
