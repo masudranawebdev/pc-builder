@@ -23,7 +23,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className="w-full h-10 xl:h-10 text-sm 3xl:text-base pl-3 flex flex-1  border sm:text-sm rounded-l-md focus:ri border-primary text-gray-800 bg-white outline-none"
             />
-            <button type="submit" className="flex items-center px-3 pointer-events-none sm:text-sm rounded-r-md uppercase bg-primary text-white text-sm 3xl:text-base">
+            <button type="submit" className="flex cursor-pointer items-center px-3 pointer-events-none sm:text-sm rounded-r-md uppercase bg-primary text-white text-sm 3xl:text-base">
               subscribe
             </button>
           </div>

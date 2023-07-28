@@ -6,16 +6,8 @@ const ProductDetailsPage = ({ product }) => {
   const [select, setSelect] = useState(false);
   const [text, setText] = useState("");
 
-  const {
-    product_name,
-    image,
-    price,
-    status,
-    individual_rating,
-    id,
-    key_features,
-    reviews,
-  } = product;
+  const { product_name, image, price, status, id, key_features, reviews } =
+    product;
   const { brand, model, port, specification, voltage } = key_features;
   const handleSelect = () => {
     setSelect((previous) => !previous);
@@ -30,7 +22,7 @@ const ProductDetailsPage = ({ product }) => {
           <h1 className="text-primary text-2xl font-semibold">
             {product_name}
           </h1>
-          <div className="flex gap-x-5 items-center">
+          <div className="flex flex-col lg:flex-row gap-2 lg:gap-5 items-center">
             <p className=" text-gray-900 px-5 rounded-full bg-gray-200">
               <strong>Price:</strong> {price}৳
             </p>
@@ -155,8 +147,10 @@ const ProductDetailsPage = ({ product }) => {
                 <div className="p-5 border-b" key={i}>
                   <div className="my-3">
                     <div className="flex gap-3 items-center">
-                      <img
-                        alt=""
+                      <Image
+                        alt="hello"
+                        height={50}
+                        width={50}
                         className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri"
                         src="https://source.unsplash.com/40x40/?portrait?1"
                       />
