@@ -5,7 +5,7 @@ import SlidingText from "@/components/slidingtext/SlidingText";
 import RootLayout from "@/layout/RootLayout";
 import Head from "next/head";
 
-export default function HomePage({products}) {
+export default function HomePage({ products }) {
   return (
     <main>
       <Head>
@@ -25,20 +25,14 @@ HomePage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/db");
+export const getServerSideProps = async () => {
+  const res = await fetch("https://pc-builder-client-rho.vercel.app/api/db");
   const data = await res.json();
-
-  // Shuffle the products array randomly
   const shuffledProducts = data?.products.sort(() => Math.random() - 0.5);
-
-  // Slice the first 10 elements from the shuffled array
   const randomProducts = shuffledProducts.slice(0, 10);
-
   return {
     props: {
       products: randomProducts,
     },
   };
 };
-

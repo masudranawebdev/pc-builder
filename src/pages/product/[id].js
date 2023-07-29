@@ -143,7 +143,7 @@ const ProductDetailsPage = ({ product }) => {
           <div id="reviews" className="mt-5">
             <h2 className="text-2xl my-2">Reviews: ({reviews.length}) </h2>
             <div className="bg-white">
-              {reviews.map((review, i) => (
+              {reviews?.map((review, i) => (
                 <div className="p-5 border-b" key={i}>
                   <div className="my-3">
                     <div className="flex gap-3 items-center">
@@ -174,21 +174,10 @@ ProductDetailsPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export async function getStaticPaths() {
-  const res = await fetch("http://localhost:3000/api/db");
-  const data = await res.json();
-
-  const paths = data.products.map((product) => ({
-    params: { id: product.id },
-  }));
-
-  return { paths, fallback: false };
-}
-
-export const getStaticProps = async (context) => {
+export async function getServerSideProps(context) {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/db?productId=${params.id}`
+    `https://pc-builder-client-rho.vercel.app/api/db?productId=${params.id}`
   );
   const data = await res.json();
   return {
@@ -196,4 +185,4 @@ export const getStaticProps = async (context) => {
       product: data.product,
     },
   };
-};
+}

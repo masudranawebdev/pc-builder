@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 
 const PcBuilderSection = () => {
   const {products, total} = useSelector(state=> state.products);
-  console.log(products.length);
   const cpu = <FiCpu />;
   const mothreboard = <BsMotherboard />;
   const powerSupply = <ImPowerCord />;
@@ -69,7 +68,7 @@ const PcBuilderSection = () => {
         <p className="text-sm px-2">core components</p>
       </div>
       <div className="grid grid-cols-1 gap-3">
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <PcBuilderCard key={category.id} category={category} />
         ))}
       </div>

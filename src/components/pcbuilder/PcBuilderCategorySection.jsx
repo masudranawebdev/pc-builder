@@ -7,7 +7,7 @@ const PcBuilderCategorySection = ({ products }) => {
     <div className="px-1 md:main-container lg:w-10/12 mx-auto bg-white my-10 py-5">
       
       <div>
-        {products.map((product) => (
+        {products?.map((product) => (
           <PcBuilderCategoryCard key={product.id} product={product} />
         ))}
       </div>

@@ -3,6 +3,7 @@ import { signIn, useSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
   const { data: session } = useSession();
@@ -19,11 +20,19 @@ const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Your registration logic here, e.g., send data to backend for registration
-    // Clear form fields after submission
+    
     setFormData({ name: "", email: "", password: "" });
   };
-  
+
+  const handleGoogleSignup = () => {
+    signIn("google", { callbackUrl: "https://pc-builder-client-rho.vercel.app" });
+    Swal.fire("wow login", "successfull");
+  };
+  const handleGithubSignup = () => {
+    signIn("github", { callbackUrl: "https://pc-builder-client-rho.vercel.app" });
+    Swal.fire("wow login", "successfull");
+  };
+
   if (session?.user) {
     return (
       <div
@@ -139,15 +148,13 @@ const LoginPage = () => {
             <p className="text-center">OR LOGIN IN WITH</p>
             <div className="flex gap-x-3 mt-5">
               <button
-                onClick={() =>
-                  signIn("github", { callbackUrl: "http://localhost:3000" })
-                }
+                onClick={handleGithubSignup}
                 className="bg-gray-700 w-full py-2 rounded text-white text-center"
               >
                 Github
               </button>
               <button
-                onClick={() => signIn("google",{callbackUrl: "http://localhost:3000"})}
+                onClick={handleGoogleSignup}
                 className="bg-red-500 w-full py-2 rounded text-white text-center"
               >
                 Google

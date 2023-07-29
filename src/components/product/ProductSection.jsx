@@ -12,7 +12,7 @@ const ProductSection = ({ products }) => {
         </p>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-1 lg:gap-5">
-        {products.map((product) => (
+        {products?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

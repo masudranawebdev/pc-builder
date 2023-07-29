@@ -54,7 +54,7 @@ const FeatureSection = () => {
         </p>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-6 gap-1 lg:gap-5">
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <FeatureCard key={category.id} category={category} />
         ))}
       </div>

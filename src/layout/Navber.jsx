@@ -80,12 +80,12 @@ const Navbar = () => {
                 <h2 className="text-[12px] font-normal">Desktop Deal</h2>
               </div>
             </div>
-            <div className="flex flex-col items-center">
+            <Link href="/pcbuilder" className="flex flex-col items-center">
               <BiSolidMessageAltAdd className="w-4 h-4" />
               <div>
                 <h2 className="text-[12px] font-normal">Pc builder</h2>
               </div>
-            </div>
+            </Link>
             <Link href="/login" className="flex flex-col items-center">
               <FiUser className="w-4 h-4" />
               <div>

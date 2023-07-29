@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
         <div className="flex items-center gap-1">
           {Array(round)
             .fill()
-            .map((_, i) => (
+            ?.map((_, i) => (
               <FiStar key={i} className="w-4 h-4  text-yellow-500 inline-block" />
             ))}
             <p>{round}</p>
