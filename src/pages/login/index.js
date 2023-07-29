@@ -6,7 +6,6 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const LoginPage = () => {
   const { data: session } = useSession();
-  console.log(session?.user);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,7 +20,6 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Your registration logic here, e.g., send data to backend for registration
-    console.log("Form submitted:", formData);
     // Clear form fields after submission
     setFormData({ name: "", email: "", password: "" });
   };

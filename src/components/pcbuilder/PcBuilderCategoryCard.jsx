@@ -1,15 +1,18 @@
+import { addProduct } from "@/redux/features/products/productSlice";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
 
 const PcBuilderCategoryCard = ({ product }) => {
-  const {
-    product_name,
-    image,
-    price,
-    status,
-    individual_rating,
-    id,
-    category,
-  } = product;
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const { product_name, image, price, status, individual_rating, category } =
+    product;
+
+  const handleAddProduct = () => {
+    dispatch(addProduct(product));
+    router.push("/pcbuilder");
+  };
   return (
     <div className="border my-2 flex flex-col lg:flex-row items-center gap-2 pb-2 px-4">
       <div>
@@ -30,7 +33,10 @@ const PcBuilderCategoryCard = ({ product }) => {
       </div>
       <div className="space-y-2">
         <p>{price} ৳</p>
-        <button className="bg-primary px-4 py-1 rounded-sm text-white">
+        <button
+          onClick={handleAddProduct}
+          className="bg-primary px-4 py-1 rounded-sm text-white"
+        >
           Add
         </button>
       </div>

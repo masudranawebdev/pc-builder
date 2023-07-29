@@ -42,8 +42,8 @@ const Herosection = () => {
         }}
         pagination={{ clickable: true }}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => {}}
+        onSlideChange={() => {}}
       >
         <SwiperSlide>
           <Image

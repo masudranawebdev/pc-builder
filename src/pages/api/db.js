@@ -18,7 +18,6 @@ async function run(req, res) {
     if (req.method === "GET") {
       // Check if the request has a productId and/or a category in the query parameters
       const { productId, category } = req.query;
-      console.log(req.params);
 
       if (productId) {
         // Fetch a single product by its id
