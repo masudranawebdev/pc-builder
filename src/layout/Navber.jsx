@@ -15,8 +15,8 @@ const Navbar = () => {
     setIsOpen((previous) => !previous);
   };
   return (
-    <>
-      <div className="px-1 md:main-container bg-primary">
+    <div className="bg-primary">
+      <div className="main-container">
         <div className="py-2 flex justify-between items-center text-white">
           <div onClick={handleToggle}>
             {isOpen ? (
@@ -102,7 +102,7 @@ const Navbar = () => {
           <MobileMenu />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

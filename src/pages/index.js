@@ -26,13 +26,37 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export const getServerSideProps = async () => {
-  const res = await fetch("https://pc-builder-client-rho.vercel.app/api/db");
-  const data = await res.json();
-  const shuffledProducts = data?.products.sort(() => Math.random() - 0.5);
-  const randomProducts = shuffledProducts.slice(0, 10);
-  return {
-    props: {
-      products: randomProducts,
-    },
-  };
+  try {
+    const res = await fetch("https://pc-builder-ashen.vercel.app/api/db");
+    const data = await res.json();
+
+    // Check if data and data.products are defined
+    if (data?.products) {
+      const shuffledProducts = data.products.sort(() => Math.random() - 0.5);
+      const randomProducts = shuffledProducts.slice(0, 10);
+
+      return {
+        props: {
+          products: randomProducts,
+        },
+      };
+    } else {
+      // Handle the case where data or data.products is undefined
+      console.error("No products data found");
+      return {
+        props: {
+          products: [],
+        },
+      };
+    }
+  } catch (error) {
+    // Handle fetch or other errors
+    console.error("Error fetching data:", error.message);
+    return {
+      props: {
+        products: [],
+      },
+    };
+  }
 };
+

@@ -17,7 +17,7 @@ CategoriesPage.getLayout = function getLayout(page) {
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `https://pc-builder-client-rho.vercel.app/api/db?category=${params.category}`
+    `https://pc-builder-ashen.vercel.app/api/db?category=${params.category}`
   );
   const data = await res.json();
   return {

@@ -17,7 +17,7 @@ body {
 
 @layer components {
   .main-container {
-    @apply md:px-5 lg:px-14 xl:px-24;
+    @apply max-w-full lg:max-w-[1290px] mx-auto px-3 md:px-5 lg:px-0;
   }
 }
 .autoplay-progress {

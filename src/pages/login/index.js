@@ -20,17 +20,25 @@ const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+
     setFormData({ name: "", email: "", password: "" });
   };
 
   const handleGoogleSignup = () => {
-    signIn("google", { callbackUrl: "https://pc-builder-client-rho.vercel.app" });
-    Swal.fire("wow login", "successfull");
+    signIn("google", {
+      callbackUrl: "https://pc-builder-ashen.vercel.app/",
+    });
+    if (session) {
+      Swal.fire("wow login", "successfull");
+    }
   };
   const handleGithubSignup = () => {
-    signIn("github", { callbackUrl: "https://pc-builder-client-rho.vercel.app" });
-    Swal.fire("wow login", "successfull");
+    signIn("github", {
+      callbackUrl: "https://pc-builder-ashen.vercel.app/",
+    });
+    if (session) {
+      Swal.fire("wow login", "successfull");
+    }
   };
 
   if (session?.user) {

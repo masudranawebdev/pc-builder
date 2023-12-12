@@ -13,9 +13,9 @@ const ProductDetailsPage = ({ product }) => {
     setSelect((previous) => !previous);
   };
   return (
-    <div className="px-1 md:main-container">
-      <div className="bg-white py-5 grid grid-cols-1 lg:grid-cols-2 gap-3 items-center ">
-        <div className="border ml-1">
+    <div className="main-container py-5">
+      <div className="bg-white py-5 grid grid-cols-1 md:grid-cols-2 gap-5 items-center rounded-md">
+        <div className="border rounded-lg ml-2 p-2">
           <Image src={image} height={400} width={600} alt={product_name} />
         </div>
         <div className="space-y-3">
@@ -177,7 +177,7 @@ ProductDetailsPage.getLayout = function getLayout(page) {
 export async function getServerSideProps(context) {
   const { params } = context;
   const res = await fetch(
-    `https://pc-builder-client-rho.vercel.app/api/db?productId=${params.id}`
+    `https://pc-builder-ashen.vercel.app/api/db?productId=${params.id}`
   );
   const data = await res.json();
   return {

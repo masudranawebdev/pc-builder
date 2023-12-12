@@ -1,6 +1,5 @@
 import React from "react";
 import PcBuilderCategoryCard from "./PcBuilderCategoryCard";
-import Link from "next/link";
 
 const PcBuilderCategorySection = ({ products }) => {
   return (

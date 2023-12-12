@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="px-5 md:main-container grid grid-cols-1 md:grid-cols-4 gap-7 md:gap-3 lg:gap-7 py-10 overflow-hidden font-sans bg-gray-200 border-t-2 border-primary">
+    <div className="bg-gray-200 border-t-2 border-primary py-10">
+      <div className="main-container grid grid-cols-1 md:grid-cols-4 gap-7 md:gap-3 lg:gap-7 overflow-hidden font-sans">
       {/* 1 */}
-
       <div>
         <Link href="/" className="underline cursor-pointer">
           <span className="text-gray-950 uppercase text-3xl font-bold">P</span>
@@ -94,6 +94,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
+    </div>
     </div>
   );
 };

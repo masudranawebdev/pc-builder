@@ -52,10 +52,10 @@ const PcBuilderSection = () => {
   }
   const isButtonDisabled = products.length !== 6;
   return (
-    <div className="px-1 md:main-container lg:w-9/12 mx-auto bg-white  my-5 lg:my-10 py-5">
+    <div className="main-container lg:w-9/12 mx-auto bg-white my-5 lg:my-10 py-5 px-5">
       <div className="flex gap-5 justify-between">
         <h1 className="text-primary font-bold text-xl grow">PC Builder - Build Your Own Computer</h1>
-        <div className="bg-white px-6 py-1 rounded border border-dashed border-primary  text-center">
+        <div className="bg-white hidden lg:block px-6 py-1 rounded border border-dashed border-primary  text-center">
           <p>35W</p>
           <p>Estimated Wattage</p>
         </div>
